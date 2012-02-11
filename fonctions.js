@@ -22,12 +22,9 @@ function drawChargement()
 
 function drawAll()
 	{
-		ctx.globalAlpha= 0.5;
-		ctx.fillStyle = "rgb(255, 0, 0)";
-		ctx.fillRect(characterArray[characterPosition].x, characterArray[characterPosition].y, 40, 50);
-		ctx.fillStyle = "rgb(0,0,0)";
-    ctx.drawImage(messArray[1], boutonUp.x, boutonUp.y);
-    ctx.drawImage(messArray[1], boutonDown.x, boutonDown.y);
+
+	    ctx.drawImage(messArray[1], boutonUp.x, boutonUp.y);
+    	ctx.drawImage(messArray[1], boutonDown.x, boutonDown.y);
 
 		ctx.drawImage(elementsArray[0], characterArray[characterPosition].x, characterArray[characterPosition].y);
 

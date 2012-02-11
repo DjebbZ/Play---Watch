@@ -33,6 +33,7 @@ run()
 					if (childrenBool == true)
 						{
 							moveChildrens();
+							soundsArray[0].play();
 							if (Math.random() > 0.9)
 								{
 									childrenArray[0].etat = 1;
