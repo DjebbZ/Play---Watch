@@ -14,7 +14,7 @@ function clic(event)
 
 		if (compteurdImages == compteurdImagesChargees)
 				{
-					
+					alert (position.x + "x, "+ position.y + "y")
 				}
 	}
 
