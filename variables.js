@@ -5,7 +5,8 @@ var ctx = canvas.getContext('2d');
 if (navigator.language == "fr") { var langue = "fr"} else { var langue = "en"}
 
 mode = "menu"; // chargement || menu || jeu;
-
+var timer = 0;
+var frequence = 1000;
 var characterPosition = 0;
 var characterArray = new Array(
 {x: 500, y: 380},
@@ -45,7 +46,7 @@ var carArray = new Array(
 )
 
 var childrenArray = new Array(
-{etat: 0, x: 782, y: 435},
+{etat: 1, x: 782, y: 435},
 {etat: 0, x: 740, y: 435},
 {etat: 0, x: 695, y: 435},
 {etat: 0, x: 655, y: 435},

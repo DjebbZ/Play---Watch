@@ -36,7 +36,7 @@ function drawAll()
 			}
 		for (i=0; i< childrenArray.length; i++)
 			{
-				ctx.fillRect(childrenArray[i].x, childrenArray[i].y, 20, 30);
+				if (childrenArray[i].etat == 1)	ctx.fillRect(childrenArray[i].x, childrenArray[i].y, 20, 30);
 			}
 		
 	}
