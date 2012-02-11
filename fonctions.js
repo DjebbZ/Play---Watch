@@ -29,16 +29,18 @@ function drawAll()
     ctx.drawImage(messArray[1], boutonUp.x, boutonUp.y);
     ctx.drawImage(messArray[1], boutonDown.x, boutonDown.y);
 
+		ctx.drawImage(elementsArray[0], characterArray[characterPosition].x, characterArray[characterPosition].y);
+
 		for (i= 0; i< carArray.length; i++)
 			{
 				for (e=0; e<carArray[i].length; e++)
-					{
-				if (carArray[i][e].etat == 1) ctx.fillRect(carArray[i][e].x, carArray[i][e].y, 80, 30);
+					{ 
+				if (carArray[i][e].etat == 1) ctx.drawImage(elementsArray[2], carArray[i][e].x, carArray[i][e].y);
 					}
 			}
 		for (i=0; i< childrenArray.length; i++)
 			{
-				if (childrenArray[i].etat == 1)	ctx.fillRect(childrenArray[i].x, childrenArray[i].y, 20, 30);
+				if (childrenArray[i].etat == 1)	ctx.drawImage(elementsArray[1], childrenArray[i].x, childrenArray[i].y);
 			}
 		
 	}

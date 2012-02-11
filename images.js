@@ -15,3 +15,7 @@ var boutonDown = {
   width:boutonUp.width,
   height: boutonUp.height
 };
+
+var elementsArray = new Array();
+initialisationDesImages(elementsArray, ["perso.png", "enfant.png", "carright.png", "carleft.png"])
+
