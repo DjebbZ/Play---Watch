@@ -3,7 +3,6 @@ canvas.width = 1024;
 canvas.height = 512;
 var ctx = canvas.getContext('2d');
 if (navigator.language == "fr") { var langue = "fr"} else { var langue = "en"}
-score = 0;
 mode = "menu"; // chargement || menu || jeu;
 var timer = 0;
 
@@ -20,6 +19,11 @@ var boutonDown = {
   height: boutonUp.height
 };
 
+var score = {
+  value: 0,
+  x: 740,
+  y: 65
+};
 
 var childrenBool = true;
 var characterPosition = 0;

@@ -20,13 +20,23 @@ function drawChargement()
 		ctx.fillRect(275, 275, pourcent*2, 50);
 	}
 
+/**
+ * Dessine le personnage et les objets de jeu
+ */
 function drawAll()
 	{
+    // Boutons
+	  ctx.drawImage(messArray[1], boutonUp.x, boutonUp.y);
+    ctx.drawImage(messArray[1], boutonDown.x, boutonDown.y);
 
-	    ctx.drawImage(messArray[1], boutonUp.x, boutonUp.y);
-    	ctx.drawImage(messArray[1], boutonDown.x, boutonDown.y);
-
+    // Personnage
 		ctx.drawImage(elementsArray[0], characterArray[characterPosition].x, characterArray[characterPosition].y);
+
+    // Score
+    ctx.fillStyle = "black";
+    ctx.font = "20px RadiolandRegular";
+    ctx.fillText(score.value, score.x, score.y);
+
 
 		for (i= 0; i< carArray.length; i++)
 			{
@@ -57,7 +67,7 @@ function moveChildrens()
 						}
 						else
 						{
-							score++;
+							score.value++;
 							frequence--;
 						}
 						childrenArray[i-1].etat = 0;
