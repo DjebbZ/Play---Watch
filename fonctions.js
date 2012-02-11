@@ -50,16 +50,26 @@ function drawAll () {
   }
 
 }
+
+/**
+ * Déplacement des enfants, et augmentation du score et de la difficulté lorsque les enfants arrivent à l'école
+ */
 function moveChildrens () {
+  // Parcours du chemin des enfants
   for (i = childrenArray.length; i > 0; i--) {
+    // La case contient un enfant
     if (childrenArray[i - 1].etat == 1) {
+      // On n'est pas dans la dernière case...
       if (i != childrenArray.length) {
+        // ... donc on allume la prochaine case
         childrenArray[i].etat = 1;
       }
       else {
+        // On est dans la dernière case, donc l'enfant est arrivé à l'école
         score.value++;
         frequence--;
       }
+      // On éteint la case case courante
       childrenArray[i - 1].etat = 0;
     }
   }
@@ -78,9 +88,9 @@ function moveCars () {
         carArray[i][e - 1].etat = 0;
       }
 
-
   }
 }
+
 function addLimit (variable, valeur, limite) {
   variable += valeur;
   if (variable >= limite) variable -= limite;
