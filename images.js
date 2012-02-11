@@ -3,3 +3,6 @@ var compteurdImagesChargees = 0;
 
 var messArray = new Array();
 initialisationDesImages(messArray, ["fond.png"]);
+
+var elementsArray = new Array();
+initialisationDesImages(elementsArray, ["perso.png", "enfant.png", "carright.png", "carleft.png"])
