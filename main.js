@@ -23,13 +23,7 @@ run()
 
 	function metronome()
 	{
-		for (i=childrenArray.length-1; i>0; i--)
-			{
-
-				if (childrenArray[i-1].etat == 1)
-					{
-						childrenArray[i].etat = 1;
-						childrenArray[i-1].etat = 0;
-					}
-			}
+		moveChildrens();
+		moveCars();
+			
 	}

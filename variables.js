@@ -3,7 +3,7 @@ canvas.width = 1024;
 canvas.height = 512;
 var ctx = canvas.getContext('2d');
 if (navigator.language == "fr") { var langue = "fr"} else { var langue = "en"}
-
+score = 0;
 mode = "menu"; // chargement || menu || jeu;
 var timer = 0;
 var frequence = 1000;
@@ -20,7 +20,7 @@ var characterArray = new Array(
 )
 var carArray = new Array(
 [
-{etat: 0, x: 250, y:360},
+{etat: 1, x: 250, y:360},
 {etat: 0, x: 390, y:360},
 {etat: 0, x: 560, y:360},
 {etat: 0, x: 705, y:360}
