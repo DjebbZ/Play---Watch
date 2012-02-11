@@ -11,19 +11,41 @@ run()
 			{
 				drawChargement();
 			}
-		timer+=30;
-		if (timer >= frequence)
-			{
-				metronome();
-				timer = 0;
-			}
+
+		metronome();
+		
 		setTimeout(run, 30);
 
 	}
 
 	function metronome()
 	{
-		moveChildrens();
-		moveCars();
+
+		timer+=30;
+		if (timer >= frequence)
+			{
+				moveCars();
+				if (Math.random() > 0.9)
+					{
+						carArray[Math.round(Math.random(0.5)*3)][0].etat = 1;
+					}
+					if (childrenBool == true)
+						{
+							moveChildrens();
+							if (Math.random() > 0.9)
+								{
+									childrenArray[0].etat = 1;
+								}
+							childrenBool = false;
+						}
+						else
+						{ 
+							childrenBool = true;
+						}
+				timer = 0;
+			}
+
+		
+		
 			
 	}

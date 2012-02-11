@@ -6,7 +6,8 @@ if (navigator.language == "fr") { var langue = "fr"} else { var langue = "en"}
 score = 0;
 mode = "menu"; // chargement || menu || jeu;
 var timer = 0;
-var frequence = 1000;
+var frequence = 500;
+var childrenBool = true;
 var characterPosition = 0;
 var characterArray = new Array(
 {x: 500, y: 380},
