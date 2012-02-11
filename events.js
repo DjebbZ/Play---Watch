@@ -6,7 +6,7 @@
 canvas.ontouchstart = function (e) {
   clic(e || window.event);
 }
-canvas.onmouseup = function (e) {
+canvas.ontouchend = function (e) {
 rectangle = false;
 }
 canvas.onmousemove = function (e) {
