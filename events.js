@@ -55,6 +55,7 @@ function keypress (event) {
     moveCharacterDown();
   }
   if (event.keyCode == 86) {
+  	choppe();
   }
 
 }
