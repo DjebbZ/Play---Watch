@@ -30,8 +30,8 @@ function mousemove(event)
 
 function keypress(event)
 	{
-		if (event.keyCode == 38)  {characterPosition = addLimit(characterPosition, 1, characterArray.length)}
-		if (event.keyCode == 40)  {}
+		if (event.keyCode == 38)  {if (characterPosition< characterArray.length -1) characterPosition++}
+		if (event.keyCode == 40)  {if (characterPosition> 0) characterPosition--}
 		if (event.keyCode == 86)  {}
 		
 	}

@@ -11,7 +11,8 @@ var characterArray = new Array(
 {x: 300, y: 400},
 {x: 300, y: 350},
 {x: 300, y: 300},
-{x: 300, y: 250}
+{x: 300, y: 250},
+{x: 300, y: 200}
 )
 var carArray = new Array(
 [
