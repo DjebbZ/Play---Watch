@@ -40,7 +40,7 @@ function clic(event)
 function mousemove(event)
 	{
 		position = {x: (event.offsetX || event.layerX), y: (event.offsetY || event.layerY)};
-
+    return false;
 		if (compteurdImages == compteurdImagesChargees)
 				{
 					

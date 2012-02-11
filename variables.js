@@ -9,14 +9,14 @@ var timer = 0;
 var frequence = 500;
 
 var boutonUp = {
-  x: 90,
-  y: 350,
-  width: 50,
-  height: 50
+  x: 50,
+  y: 210,
+  width: 90,
+  height: 90
 };
 var boutonDown = {
-  x: 90,
-  y: 420,
+  x: 50,
+  y: 320,
   width:boutonUp.width,
   height: boutonUp.height
 };
