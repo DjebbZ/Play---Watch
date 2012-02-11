@@ -6,16 +6,14 @@
 canvas.ontouchstart = function (e) {
   clic(e || window.event);
 }
-canvas.ontouchend = function (e) {
-rectangle = false;
-}
+
 canvas.onmousemove = function (e) {
   mousemove(e || window.event);
 }
 
 
 function clic (event) {
- /* if (compteurdImages == compteurdImagesChargees) {
+ if (compteurdImages == compteurdImagesChargees) {
     position = {x : (event.offsetX || event.layerX), y : (event.offsetY || event.layerY)};
 
     if (
@@ -38,9 +36,7 @@ function clic (event) {
       moveCharacterDown();
     }
   }
-  */
-
-rectangle = true;
+  
 }
 
 function mousemove (event) {
