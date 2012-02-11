@@ -1,3 +1,8 @@
+/**
+ * @file event.js
+ * Gestion des évènements  et interactions utilisateur
+ */
+
 canvas.onclick = function (e)
 { 
 	clic(e || window.event);
