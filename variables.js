@@ -7,6 +7,20 @@ score = 0;
 mode = "menu"; // chargement || menu || jeu;
 var timer = 0;
 var frequence = 500;
+
+var boutonUp = {
+  x: 90,
+  y: 350,
+  width: 50,
+  height: 50
+};
+var boutonDown = {
+  x: 90,
+  y: 420,
+  width:boutonUp.width,
+  height: boutonUp.height
+};
+
 var childrenBool = true;
 var characterPosition = 0;
 var characterArray = new Array(

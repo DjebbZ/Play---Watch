@@ -82,7 +82,6 @@ function moveCars()
 }
 function addLimit(variable, valeur, limite)
 {
-
 	variable+=valeur;
 	if (variable >= limite) variable -= limite;
 	return variable;
