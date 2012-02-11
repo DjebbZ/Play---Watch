@@ -3,7 +3,7 @@
  * Gestion des évènements  et interactions utilisateur
  */
 
-canvas.onmousedown = function (e) {
+canvas.ontouchstart = function (e) {
   clic(e || window.event);
 }
 canvas.onmouseup = function (e) {
