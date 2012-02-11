@@ -1,6 +1,6 @@
 var canvas = document.getElementById("canvas");
 canvas.width = 1024;
-canvas.height = 600;
+canvas.height = 512;
 var ctx = canvas.getContext('2d');
 if (navigator.language == "fr") { var langue = "fr"} else { var langue = "en"}
 
@@ -8,48 +8,57 @@ mode = "menu"; // chargement || menu || jeu;
 
 var characterPosition = 0;
 var characterArray = new Array(
-{x: 490, y: 410},
-{x: 490, y: 350},
-{x: 490, y: 300},
-{x: 490, y: 250},
-{x: 490, y: 200},
-{x: 490, y: 150},
-{x: 490, y: 100}
+{x: 500, y: 380},
+{x: 500, y: 330},
+{x: 500, y: 285},
+{x: 500, y: 240},
+{x: 500, y: 190},
+{x: 500, y: 145},
+{x: 500, y: 100},
+{x: 500, y: 55}
 )
 var carArray = new Array(
 [
-{etat: 0, x: 280, y:345},
-{etat: 0, x: 420, y:345},
-{etat: 0, x: 560, y:345},
-{etat: 0, x: 700, y:345}
+{etat: 0, x: 250, y:360},
+{etat: 0, x: 390, y:360},
+{etat: 0, x: 560, y:360},
+{etat: 0, x: 705, y:360}
 ],
 [
-{etat: 0, x: 280, y:400},
-{etat: 0, x: 420, y:400},
-{etat: 0, x: 560, y:400},
-{etat: 0, x: 700, y:400}
+{etat: 0, x: 250, y:300},
+{etat: 0, x: 390, y:300},
+{etat: 0, x: 560, y:300},
+{etat: 0, x: 705, y:300}
 ],
 [
-{etat: 0, x: 280, y:210},
-{etat: 0, x: 420, y:210},
-{etat: 0, x: 560, y:210},
-{etat: 0, x: 700, y:210}
+{etat: 0, x: 250, y:180},
+{etat: 0, x: 390, y:180},
+{etat: 0, x: 560, y:180},
+{etat: 0, x: 705, y:180}
 ],
 [
-{etat: 0, x: 280, y:155},
-{etat: 0, x: 420, y:155},
-{etat: 0, x: 560, y:155},
-{etat: 0, x: 700, y:155}
+{etat: 0, x: 250, y:120},
+{etat: 0, x: 390, y:120},
+{etat: 0, x: 560, y:120},
+{etat: 0, x: 705, y:120}
 ]
 )
 
 var childrenArray = new Array(
-{etat: 0, x: 400, y: 400},
-{etat: 0, x: 350, y: 400},
-{etat: 0, x: 300, y: 400},
-{etat: 0, x: 250, y: 400},
-{etat: 0, x: 250, y: 350},
-{etat: 0, x: 250, y: 300},
-{etat: 0, x: 250, y: 250},
-{etat: 0, x: 250, y: 200}
+{etat: 0, x: 782, y: 435},
+{etat: 0, x: 740, y: 435},
+{etat: 0, x: 695, y: 435},
+{etat: 0, x: 655, y: 435},
+{etat: 0, x: 610, y: 435},
+{etat: 0, x: 565, y: 435},
+{etat: 0, x: 522, y: 435},
+{etat: 0, x: 480, y: 435},
+{etat: 0, x: 480, y: 390},
+{etat: 0, x: 480, y: 345},
+{etat: 0, x: 480, y: 300},
+{etat: 0, x: 480, y: 255},
+{etat: 0, x: 480, y: 210},
+{etat: 0, x: 480, y: 160},
+{etat: 0, x: 480, y: 120},
+{etat: 0, x: 480, y: 70}
 )

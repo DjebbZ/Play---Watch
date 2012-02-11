@@ -22,20 +22,23 @@ function drawChargement()
 
 function drawAll()
 	{
+		ctx.globalAlpha= 0.5;
+		ctx.fillStyle = "rgb(255, 0, 0)";
+		ctx.fillRect(characterArray[characterPosition].x, characterArray[characterPosition].y, 40, 50);
+		ctx.fillStyle = "rgb(0,0,0)";
+
 		for (i= 0; i< carArray.length; i++)
 			{
 				for (e=0; e<carArray[i].length; e++)
 					{
-						ctx.fillRect(carArray[i][e].x, carArray[i][e].y, 40, 40);
+						ctx.fillRect(carArray[i][e].x, carArray[i][e].y, 80, 30);
 					}
 			}
 		for (i=0; i< childrenArray.length; i++)
 			{
-				ctx.fillRect(childrenArray[i].x, childrenArray[i].y, 20, 20);
+				ctx.fillRect(childrenArray[i].x, childrenArray[i].y, 20, 30);
 			}
-		ctx.fillStyle = "rgb(255, 0, 0)";
-		ctx.fillRect(characterArray[characterPosition].x, characterArray[characterPosition].y, 40, 50);
-		ctx.fillStyle = "rgb(0,0,0)";
+		
 	}
 function addLimit(variable, valeur, limite)
 {
