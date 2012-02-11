@@ -49,7 +49,7 @@ function drawAll () {
   for (i = 0; i < childrenArray.length; i++) {
     if (childrenArray[i].etat == 1)  ctx.drawImage(elementsArray[1], childrenArray[i].x, childrenArray[i].y);
   }
-
+  if (rectangle) ctx.fillRect(0,0, canvas.width, canvas.height)
 }
 
 function moveCharacterUp() {

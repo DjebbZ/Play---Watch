@@ -12,7 +12,7 @@ var timer = 0;
 
 var nbDeaths = 0;
 var lifeLost = false;
-
+var rectangle = false;
 var boutonUp = {
   x      : 50,
   y      : 210,
