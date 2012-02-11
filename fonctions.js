@@ -104,3 +104,21 @@ function moveCharacterUp () {
 function moveCharacterDown () {
   if (characterPosition > 0) characterPosition--;
 }
+
+/**
+ * Enlève une vie et prépare l'arrêt du déplacement des objets de jeu
+ */
+function oneMoreDeath() {
+  if (!lifeLost) {
+    console.log("one death");
+    nbDeaths++;
+    lifeLost = true;
+    if (nbDeaths == 3) {
+      //alert("GAME OVER !");
+    }
+  }
+}
+
+function drawDead() {
+
+}

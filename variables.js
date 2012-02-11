@@ -10,7 +10,7 @@ if (navigator.language == "fr") {
 var mode = "menu"; // chargement || menu || jeu;
 var timer = 0;
 
-var nbLives = 3;
+var nbDeaths = 0;
 var lifeLost = false;
 
 var boutonUp = {
@@ -31,6 +31,8 @@ var score = {
   x     : 740,
   y     : 65
 };
+
+var dangerousCar = 0;
 
 var childrenBool = true;
 var characterPosition = 0;

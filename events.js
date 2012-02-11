@@ -18,16 +18,20 @@ function clic (event) {
     if (
       (position.x >= boutonUp.x && position.x <= (boutonUp.x + boutonUp.width))
         &&
-        (position.y >= boutonUp.y && position.y <= (boutonUp.y + boutonUp.width))
-      ) {
+      (position.y >= boutonUp.y && position.y <= (boutonUp.y + boutonUp.width))
+        &&
+      !lifeLost
+    ) {
       moveCharacterUp();
     }
 
     if (
       (position.x >= boutonDown.x && position.x <= (boutonDown.x + boutonDown.width))
         &&
-        (position.y >= boutonDown.y && position.y <= (boutonDown.y + boutonDown.width))
-      ) {
+      (position.y >= boutonDown.y && position.y <= (boutonDown.y + boutonDown.width))
+        &&
+      !lifeLost
+    ) {
       moveCharacterDown();
     }
   }
@@ -42,10 +46,10 @@ function mousemove (event) {
 }
 
 function keypress (event) {
-  if (event.keyCode == 38) {
+  if (event.keyCode == 38 && !lifeLost) {
     moveCharacterUp();
   }
-  if (event.keyCode == 40) {
+  if (event.keyCode == 40 && !lifeLost) {
     moveCharacterDown();
   }
   if (event.keyCode == 86) {
