@@ -86,3 +86,11 @@ function addLimit(variable, valeur, limite)
 	if (variable >= limite) variable -= limite;
 	return variable;
 }
+
+function moveCharacterUp() {
+  if (characterPosition < characterArray.length -1) characterPosition++;
+}
+
+function moveCharacterDown() {
+  if (characterPosition > 0) characterPosition--;
+}
