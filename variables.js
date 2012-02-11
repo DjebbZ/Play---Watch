@@ -61,20 +61,20 @@ var carArray = new Array(
 )
 
 var childrenArray = new Array(
-{etat: 1, x: 782, y: 435},
-{etat: 0, x: 740, y: 435},
-{etat: 0, x: 695, y: 435},
-{etat: 0, x: 655, y: 435},
-{etat: 0, x: 610, y: 435},
-{etat: 0, x: 565, y: 435},
-{etat: 0, x: 522, y: 435},
-{etat: 0, x: 480, y: 435},
-{etat: 0, x: 480, y: 390},
-{etat: 0, x: 480, y: 345},
-{etat: 0, x: 480, y: 300},
-{etat: 0, x: 480, y: 255},
-{etat: 0, x: 480, y: 210},
-{etat: 0, x: 480, y: 160},
-{etat: 0, x: 480, y: 120},
-{etat: 0, x: 480, y: 70}
+{etat: 1, x: 782, y: 435, taken: 0, blocken: 0},
+{etat: 0, x: 740, y: 435, taken: 0, blocken: 0},
+{etat: 0, x: 695, y: 435, taken: 0, blocken: 0},
+{etat: 0, x: 655, y: 435, taken: 0, blocken: 0},
+{etat: 0, x: 610, y: 435, taken: 0, blocken: 0},
+{etat: 0, x: 565, y: 435, taken: 0, blocken: 0},
+{etat: 0, x: 522, y: 435, taken: 0, blocken: 0},
+{etat: 0, x: 480, y: 435, taken: 0, blocken: 0},
+{etat: 0, x: 480, y: 390, taken: 0, blocken: 0},
+{etat: 0, x: 480, y: 345, taken: 0, blocken: 0},
+{etat: 0, x: 480, y: 300, taken: 0, blocken: 0},
+{etat: 0, x: 480, y: 255, taken: 0, blocken: 0},
+{etat: 1, x: 480, y: 210, taken: 1, blocken: 0},
+{etat: 0, x: 480, y: 160, taken: 0, blocken: 0},
+{etat: 0, x: 480, y: 120, taken: 0, blocken: 0},
+{etat: 0, x: 480, y: 70, taken: 0, blocken: 0}
 )

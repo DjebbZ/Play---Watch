@@ -49,20 +49,41 @@ function moveChildrens()
 {
 	for (i=childrenArray.length; i>0; i--)
 			{
+				var test = false;
+				var quit = false;
+				var f = i;
+				
+				
 				if (childrenArray[i-1].etat == 1)
 					{
-						if (i != childrenArray.length)
-						{
-							childrenArray[i].etat = 1;
+						if (!childrenArray[i-1].taken)
+						{	
+
+							if (i != childrenArray.length)
+							{
+								if (!childrenArray[i].taken && !childrenArray[i].blocken)
+									{
+									childrenArray[i].etat = 1;
+									childrenArray[i-1].etat = 0;
+									}
+								else
+									{
+									childrenArray[i-1].blocken = true;
+									}
+							}
+							else
+							{
+								score++;
+								frequence--;
+								childrenArray[i-1].etat = 0;
+							}
 						}
-						else
-						{
-							score++;
-							frequence--;
-						}
-						childrenArray[i-1].etat = 0;
+
+						
 					}
 			}
+		
+			
 }
 
 function moveCars()
@@ -94,8 +115,10 @@ function addLimit(variable, valeur, limite)
 
 function moveCharacterUp() {
   if (characterPosition < characterArray.length -1) characterPosition++;
+  soundsArray[1].play();
 }
 
 function moveCharacterDown() {
   if (characterPosition > 0) characterPosition--;
+  soundsArray[1].play();
 }
