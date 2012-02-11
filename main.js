@@ -6,13 +6,14 @@ run()
 		if (compteurdImages == compteurdImagesChargees)
 			{
 				drawAll();
+				metronome();
 			}
 		else
 			{
 				drawChargement();
 			}
 
-		metronome();
+		
 		
 		setTimeout(run, 30);
 

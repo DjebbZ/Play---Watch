@@ -6,7 +6,7 @@ if (navigator.language == "fr") { var langue = "fr"} else { var langue = "en"}
 score = 0;
 mode = "menu"; // chargement || menu || jeu;
 var timer = 0;
-var frequence = 500;
+
 var childrenBool = true;
 var characterPosition = 0;
 var characterArray = new Array(
@@ -33,16 +33,16 @@ var carArray = new Array(
 {etat: 0, x: 705, y:300}
 ],
 [
-{etat: 0, x: 250, y:180},
-{etat: 0, x: 390, y:180},
+{etat: 0, x: 705, y:180},
 {etat: 0, x: 560, y:180},
-{etat: 0, x: 705, y:180}
+{etat: 0, x: 390, y:180},
+{etat: 0, x: 250, y:180}
 ],
 [
-{etat: 0, x: 250, y:120},
-{etat: 0, x: 390, y:120},
+{etat: 0, x: 705, y:120},
 {etat: 0, x: 560, y:120},
-{etat: 0, x: 705, y:120}
+{etat: 0, x: 390, y:120},
+{etat: 0, x: 250, y:120}
 ]
 )
 

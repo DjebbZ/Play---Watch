@@ -29,7 +29,11 @@ function drawAll()
 			{
 				for (e=0; e<carArray[i].length; e++)
 					{ 
-				if (carArray[i][e].etat == 1) ctx.drawImage(elementsArray[2], carArray[i][e].x, carArray[i][e].y);
+					if (carArray[i][e].etat == 1) 
+						{
+							if (i <= 1) ctx.drawImage(elementsArray[2], carArray[i][e].x, carArray[i][e].y);
+							if (i > 1) ctx.drawImage(elementsArray[3], carArray[i][e].x, carArray[i][e].y);
+						}
 					}
 			}
 		for (i=0; i< childrenArray.length; i++)
@@ -62,9 +66,11 @@ function moveCars()
 {
 	for (i=0; i<carArray.length; i++)
 			{
+			
 				for (e=carArray[i].length; e>0; e-- )	
 					if (carArray[i][e-1].etat == 1)
 						{
+
 							if (e != carArray[i].length)
 							{
 								carArray[i][e].etat = 1;
@@ -72,6 +78,8 @@ function moveCars()
 							
 							carArray[i][e-1].etat = 0;
 						}
+				
+
 			}
 }
 function addLimit(variable, valeur, limite)
