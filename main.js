@@ -63,7 +63,10 @@ function metronome () {
       dangerousCar.etat = 0;
       victimChild.etat = 0;
       victimChild.taken = 0;
+      victimPerso.etat = 1;
+      deadPerso.etat = 0;
       choppeBool = false;
+      persoEcrase = false;
     }
   }
 }
@@ -81,7 +84,9 @@ function checkDefeat() {
       victimChild = childrenArray[9];
     }
     if (characterPosition == 1) {
-      victimPerso = DieArray[0];
+      persoEcrase = true;
+      victimPerso = characterPosition;
+      deadPerso = DieArray[0];
     }
     oneMoreDeath();
   }
@@ -94,6 +99,11 @@ function checkDefeat() {
     if (childrenArray[10].etat == 1) {
       victimChild = childrenArray[10];
     }
+    if (characterPosition == 2) {
+      persoEcrase = true;
+      victimPerso = characterPosition;
+      deadPerso = DieArray[1];
+    }
     oneMoreDeath();
   }
 
@@ -105,6 +115,11 @@ function checkDefeat() {
     if (childrenArray[13].etat == 1) {
       victimChild = childrenArray[13];
     }
+    if (characterPosition == 5) {
+      persoEcrase = true;
+      victimPerso = characterPosition;
+      deadPerso = DieArray[2];
+    }
     oneMoreDeath();
   }
 
@@ -115,6 +130,11 @@ function checkDefeat() {
     dangerousCar = carArray[3][2];
     if (childrenArray[14].etat == 1) {
       victimChild = childrenArray[14];
+    }
+    if (characterPosition == 6) {
+      persoEcrase = true;
+      victimPerso = characterPosition;
+      deadPerso = DieArray[3];
     }
     oneMoreDeath();
   }
