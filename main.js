@@ -48,7 +48,7 @@ function metronome () {
   } else {
     //drawDead();
 
-    if (timer >= frequence * 3) {
+    if (timer >= frequence * 4.4) {
       lifeLost = false;
       timer = 0;
       dangerousCar.etat = 0;

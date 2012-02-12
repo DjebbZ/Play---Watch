@@ -191,7 +191,7 @@ function moveCharacterDown () {
  */
 function oneMoreDeath() {
   if (!lifeLost) {
-    console.log("one death");
+    soundsArray[2].play();
     nbDeaths++;
     lifeLost = true;
     if (nbDeaths == 3) {

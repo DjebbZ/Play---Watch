@@ -13,5 +13,8 @@ new buzz.sound("sounds/enfant", {
 }),
 new buzz.sound("sounds/perso", {
 	formats: [ "ogg", "mp3", "wav"]
+}),
+new buzz.sound("sounds/loose", {
+	formats: [ "ogg", "mp3", "wav"]
 })
 )
