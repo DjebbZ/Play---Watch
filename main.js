@@ -45,7 +45,7 @@ function metronome () {
 
     }
   } else {
-    //drawDead();
+    drawDead();
 
     // La partie recommence
     if (timer >= frequence * 4.4) {
@@ -56,7 +56,6 @@ function metronome () {
       victimChild.taken = 0;
       choppeBool = false;
     }
-
   }
 }
 
@@ -71,6 +70,9 @@ function checkDefeat() {
     dangerousCar = carArray[0][2];
     if (childrenArray[9].etat == 1) {
       victimChild = childrenArray[9];
+    }
+    if (characterPosition == 1) {
+      victimPerso = DieArray[0];
     }
     oneMoreDeath();
   }

@@ -5,7 +5,13 @@ var messArray = new Array();
 initialisationDesImages(messArray, ["fond.png", "button.png"]);
 
 var elementsArray = new Array();
-initialisationDesImages(elementsArray, ["perso.png", "enfant.png", "carright.png", "carleft.png", "vie.png"])
+initialisationDesImages(elementsArray, ["perso.png",
+                                        "enfant.png",
+                                        "carright.png",
+                                        "carleft.png",
+                                        "vie.png",
+                                        "deadPersoLeft.png",
+                                        "deadPersoRight.png"]);
 
 var soundsArray = new Array(
 new buzz.sound("sounds/enfant", {

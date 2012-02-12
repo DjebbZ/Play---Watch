@@ -46,6 +46,7 @@ var score = {
 
 var dangerousCar = 0;
 var victimChild = 0;
+var victimPerso = 0;
 
 var childrenBool = true;
 var characterPosition = 0;
@@ -112,3 +113,10 @@ var childrenArray = new Array(
 {etat: 0, x: 480, y: 70, taken: 0, blocken: 0} //arrivée
 );
 
+// Positions de morts du perso
+var DieArray = new Array(
+  {etat: 0, x: 590, y: 385},
+  {etat: 0, x: 590, y: 325},
+  {etat: 0, x: 390, y: 205},
+  {etat: 0, x: 390, y: 145}
+);

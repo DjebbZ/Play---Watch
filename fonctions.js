@@ -30,7 +30,7 @@ function drawAll () {
   if (!downPressed) ctx.drawImage(messArray[1], boutonDown.x, boutonDown.y);
   if (!catchPressed) ctx.drawImage(messArray[1], boutonCatch.x, boutonCatch.y);
 
-  // Personnage
+  // Affichage du personnage
   ctx.drawImage(elementsArray[0], characterArray[characterPosition].x, characterArray[characterPosition].y);
 
   // Score
@@ -43,7 +43,7 @@ function drawAll () {
   nbDeaths > 1 ? ctx.drawImage(elementsArray[4], 250, 50) : '';
   nbDeaths > 2 ? ctx.drawImage(elementsArray[4], 300, 50) : '';
 
-
+  // Affichage des voitures
   for (i = 0; i < carArray.length; i++) {
     for (e = 0; e < carArray[i].length; e++) {
       if (carArray[i][e].etat == 1) {
@@ -52,10 +52,18 @@ function drawAll () {
       }
     }
   }
+  // Affichage des enfants
   for (i = 0; i < childrenArray.length; i++) {
     if (childrenArray[i].etat == 1)  ctx.drawImage(elementsArray[1], childrenArray[i].x, childrenArray[i].y);
   }
-  if (rectangle) ctx.fillRect(0,0, canvas.width, canvas.height)
+
+  // Affichage des morts
+  for (i = 0; i < DieArray.length; i++) {
+    if (DieArray[i].etat == 1) {
+      ctx.drawImage(elementsArray[5], DieArray[i].x, DieArray[i].y);
+    }
+  }
+  if (rectangle) ctx.fillRect(0,0, canvas.width, canvas.height);
 }
 
 
@@ -209,6 +217,5 @@ function oneMoreDeath() {
 }
 
 function drawDead() {
-
-
+  DieArray.etat = 1;
 }
