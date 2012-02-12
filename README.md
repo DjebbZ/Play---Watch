@@ -20,10 +20,16 @@ You play "Super Crosser", a man whose goal is to help children cross the road an
 cars. You take the children from the bottom of the screen and release them in front of the school.
 You have 3 lives before Game Over.
 
-### Controls
+### How to play ?
 
-On a computer, `UP` and `DOWN` arrows move the character, `V` takes and releases the child.
-On a tablet/smartphone, the left buttons move the character, the right button takes and releases the child.
+1. Open index.html in a modern web browser that supports canvas, or in the BlackBerry Playbook.
+2. On a computer, `UP` and `DOWN` arrows move the character, `V` catches and releases the child.
+2b. On a tablet/smartphone, the left buttons move the character, the right button takes and releases the child.
+
+Version history
+---------------
+
+_1.0-alpha1_ - Version showcased at the HTML5 Game Jam. We didn't win :/. Tested successfully both in Chrome and the PlayBook.
 
 Credits
 -------
