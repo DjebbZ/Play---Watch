@@ -28,8 +28,8 @@ var boutonDown = {
 
 var score = {
   value : 0,
-  x     : 740,
-  y     : 65
+  x     : 720,
+  y     : 92
 };
 
 var dangerousCar = 0;

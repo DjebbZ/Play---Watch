@@ -34,7 +34,7 @@ function drawAll () {
 
   // Score
   ctx.fillStyle = "black";
-  ctx.font = "20px RadiolandRegular";
+  ctx.font = "40px RadiolandRegular";
   ctx.fillText(score.value, score.x, score.y);
 
 
@@ -84,7 +84,7 @@ function moveChildrens()
 							}
 							else
 							{
-								score++;
+								score.value++;
 								frequence--;
 								childrenArray[i-1].etat = 0;
 							}
