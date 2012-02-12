@@ -51,6 +51,7 @@ function metronome () {
       lifeLost = false;
       timer = 0;
       dangerousCar.etat = 0;
+      victimChild.etat = 0;
     }
 
   }
@@ -65,6 +66,9 @@ function checkDefeat() {
     (characterPosition == 1 || childrenArray[9].etat == 1)
     ) {
     dangerousCar = carArray[0][2];
+    if (childrenArray[9].etat == 1) {
+      victimChild = childrenArray[9];
+    }
     oneMoreDeath();
   }
 
@@ -73,6 +77,9 @@ function checkDefeat() {
     (characterPosition == 2 || childrenArray[10].etat == 1)
     ) {
     dangerousCar = carArray[1][2];
+    if (childrenArray[10].etat == 1) {
+      victimChild = childrenArray[10];
+    }
     oneMoreDeath();
   }
 
@@ -81,6 +88,9 @@ function checkDefeat() {
     (characterPosition == 5 || childrenArray[13].etat == 1)
     ) {
     dangerousCar = carArray[2][2];
+    if (childrenArray[13].etat == 1) {
+      victimChild = childrenArray[13];
+    }
     oneMoreDeath();
   }
 
@@ -89,6 +99,9 @@ function checkDefeat() {
     (characterPosition == 6 || childrenArray[14].etat == 1)
     ) {
     dangerousCar = carArray[3][2];
+    if (childrenArray[14].etat == 1) {
+      victimChild = childrenArray[14];
+    }
     oneMoreDeath();
   }
 }

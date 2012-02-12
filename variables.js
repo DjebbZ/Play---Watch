@@ -45,6 +45,7 @@ var score = {
 };
 
 var dangerousCar = 0;
+var victimChild = 0;
 
 var childrenBool = true;
 var characterPosition = 0;
