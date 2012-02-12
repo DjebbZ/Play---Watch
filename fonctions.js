@@ -90,6 +90,7 @@ function moveChildrens()
 									{
 									childrenArray[i].etat = 1;
 									childrenArray[i-1].etat = 0;
+									childrenArray[i-1].blocken = 0;
 									}
 								else
 									{
@@ -177,6 +178,7 @@ function moveCharacterUp() {
 		  				childrenArray[characterPosition+9].taken = 1;
 		  				childrenArray[characterPosition+8].taken = 0;
 		  				childrenArray[characterPosition+7].blocken = 0;
+		  				childrenArray[characterPosition+6].blocken = 0;
 		  				characterPosition++;
 		  			}
 		  	}
