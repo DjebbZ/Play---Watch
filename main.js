@@ -34,9 +34,18 @@ function metronome () {
     	//enfantSon.play();
 
         // Apparition d'un nouvel enfant
-        if (Math.random() > 0.9) {
+        if (probEnfantArray[curseurDifficulte] == 1) {
           childrenArray[0].etat = 1;
         }
+        curseurDifficulte++
+        if (curseurDifficulte == probEnfantArray.length-1)
+        	{
+        		curseurDifficulte = 0;
+        		//console.log("sort");
+        		probEnfantArray = shuffle(probEnfantArray);
+        	} 
+        
+
         childrenBool = false;
       }
       else {
