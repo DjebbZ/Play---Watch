@@ -5,13 +5,10 @@ function run () {
   if (compteurdImages == compteurdImagesChargees) {
     drawAll();
     metronome();
-    checkDefeat();
   }
   else {
     drawChargement();
   }
-
-
   setTimeout(run, 30);
 
 }
@@ -25,6 +22,7 @@ function metronome () {
   if (!lifeLost) {
     if (timer >= frequence) {
       moveCars();
+      checkDefeat();
       timer = 0;
       // Apparition d'une nouvelle voiture
       if (Math.random() > 0.9) {

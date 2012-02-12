@@ -22,7 +22,7 @@ function clic (event) {
     // BlackBerry specific
     // @see : https://bdsc.webapps.blackberry.com/html5/apis/Element.html#event:ontouchstart
     // @see : http://docs.blackberry.com/en/developers/deliverables/27297/Touch_Objects_1593432_11.jsp#TouchList_1590067_11
-    // @see : http://docs.blackberry.com/en/developers/deliverables/13222/CS_Adding_simple_touch_event_handling_to_app_705068_11.jsp
+    // @see : http://supportforums.blackberry.com/t5/Web-and-WebWorks-Development/Sample-Code-SketchPad-Application/ta-p/614077
     if (event.touches && event.changedTouches && event.targetTouches) {
       var touched = event.changedTouches[0];
       position = {x : touched.clientX, y : touched.clientY};
