@@ -47,6 +47,7 @@ var score = {
 
 var dangerousCar = 0;
 var victimChild = 0;
+var voisinVictimChild = 0;
 var victimPerso = 0;
 var deadPerso = 0;
 var persoEcrase = false;
