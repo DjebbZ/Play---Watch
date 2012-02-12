@@ -52,10 +52,7 @@ function drawAll () {
   if (rectangle) ctx.fillRect(0,0, canvas.width, canvas.height)
 }
 
-function moveCharacterUp() {
-  if (characterPosition < characterArray.length -1) characterPosition++;
-  soundsArray[1].play();
-}
+
 /**
  * Déplacement des enfants, et augmentation du score et de la difficulté lorsque les enfants arrivent à l'école
  */
@@ -115,15 +112,75 @@ function moveCars () {
 
   }
 }
-
+function choppe()
+{
+	if (!choppeBool)
+		{
+			if (childrenArray[characterPosition+8].etat == 1)
+				{
+					console.log("choppe")
+					choppeBool = true;
+					childrenArray[characterPosition+8].taken = 1;
+				}
+		}
+	else
+		{
+					console.log("unchoppe")
+					choppeBool = false;
+					childrenArray[characterPosition+8].taken = 0;
+					childrenArray[characterPosition+7].blocken = 0;
+				
+		}
+}
 function addLimit (variable, valeur, limite) {
   variable += valeur;
   if (variable >= limite) variable -= limite;
   return variable;
 }
 
+function moveCharacterUp() {
+  if (characterPosition < characterArray.length -1) 
+  	{
+	  	if (choppeBool == false) 
+	  	 	{
+		  	 	characterPosition++;
+		  	}
+		  else
+		  	{
+		  		if (childrenArray[characterPosition+9].etat == 0)
+		  			{
+		  				
+		  				childrenArray[characterPosition+9].etat = 1;
+		  				childrenArray[characterPosition+8].etat = 0;
+		  				childrenArray[characterPosition+9].taken = 1;
+		  				childrenArray[characterPosition+8].taken = 0;
+		  				childrenArray[characterPosition+7].blocken = 0;
+		  				characterPosition++;
+		  			}
+		  	}
+	}
+  soundsArray[1].play();
+}
+
 function moveCharacterDown () {
-  if (characterPosition > 0) characterPosition--;
+  if (characterPosition > 0)
+  	 {
+	  	 if (choppeBool == false) 
+	  	 	{
+		  	 	characterPosition--;
+		  	}
+		  else
+		  	{
+		  		if (childrenArray[characterPosition+7].etat == 0)
+		  			{
+		  				childrenArray[characterPosition+7].etat = 1;
+		  				childrenArray[characterPosition+8].etat = 0;
+		  				childrenArray[characterPosition+7].taken = 1;
+		  				childrenArray[characterPosition+8].taken = 0;
+		  				characterPosition--;
+		  			}
+		  	}
+	 }
 
   soundsArray[1].play();
 
@@ -134,7 +191,7 @@ function moveCharacterDown () {
  */
 function oneMoreDeath() {
   if (!lifeLost) {
-    console.log("one death");
+    soundsArray[2].play();
     nbDeaths++;
     lifeLost = true;
     if (nbDeaths == 3) {

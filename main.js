@@ -20,7 +20,7 @@ function run () {
  * Déplacement et apparition rythmés des objets de jeu (enfants, voitures)
  */
 function metronome () {
-  console.log("metrone start");
+  
   timer += 30;
   if (!lifeLost) {
     if (timer >= frequence) {
@@ -48,7 +48,7 @@ function metronome () {
   } else {
     //drawDead();
 
-    if (timer >= frequence * 3) {
+    if (timer >= frequence * 4.4) {
       lifeLost = false;
       timer = 0;
       dangerousCar.etat = 0;

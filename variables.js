@@ -9,7 +9,7 @@ if (navigator.language == "fr") {
 }
 var mode = "menu"; // chargement || menu || jeu;
 var timer = 0;
-
+var choppeBool = false;
 var nbDeaths = 0;
 var lifeLost = false;
 var rectangle = false;
@@ -85,7 +85,7 @@ var childrenArray = new Array(
 {etat: 0, x: 740, y: 435, taken: 0, blocken: 0},
 {etat: 0, x: 695, y: 435, taken: 0, blocken: 0},
 {etat: 0, x: 655, y: 435, taken: 0, blocken: 0},
-{etat: 0, x: 610, y: 435, taken: 0, blocken: 0},
+{etat: 1, x: 610, y: 435, taken: 0, blocken: 0},
 {etat: 0, x: 565, y: 435, taken: 0, blocken: 0},
 {etat: 0, x: 522, y: 435, taken: 0, blocken: 0},
 {etat: 0, x: 480, y: 435, taken: 0, blocken: 0},
@@ -93,7 +93,7 @@ var childrenArray = new Array(
 {etat: 0, x: 480, y: 345, taken: 0, blocken: 0},// route 1
 {etat: 0, x: 480, y: 300, taken: 0, blocken: 0},// route 2
 {etat: 0, x: 480, y: 255, taken: 0, blocken: 0},// terre-plein 1
-{etat: 1, x: 480, y: 210, taken: 1, blocken: 0},// terre-plein 2
+{etat: 0, x: 480, y: 210, taken: 0, blocken: 0},// terre-plein 2
 {etat: 0, x: 480, y: 160, taken: 0, blocken: 0},// route 3
 {etat: 0, x: 480, y: 120, taken: 0, blocken: 0},// route 4
 {etat: 0, x: 480, y: 70, taken: 0, blocken: 0} //arrivée
