@@ -1,2 +1,2 @@
 //position et taille du menu
-var frequence = 500;
+var frequence = 700;
