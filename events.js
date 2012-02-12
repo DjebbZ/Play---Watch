@@ -11,6 +11,11 @@ canvas.onmousemove = function (e) {
   mousemove(e || window.event);
 }
 
+canvas.ontouchend = function (e) {
+	upPressed = false;
+	downPressed = false;
+	catchPressed = false;
+}
 function clic (event) {
   var position;
   if (compteurdImages == compteurdImagesChargees) {
@@ -32,6 +37,7 @@ function clic (event) {
         &&
         !lifeLost
       ) {
+      upPressed = true;
       moveCharacterUp();
     }
 
@@ -42,8 +48,22 @@ function clic (event) {
         &&
         !lifeLost
       ) {
+      downPressed = true;
       moveCharacterDown();
     }
+
+    if (
+      (position.x >= boutonDown.x && position.x <= (boutonCatch.x + boutonCatch.width))
+        &&
+        (position.y >= boutonDown.y && position.y <= (boutonCatch.y + boutonCatch.width))
+        &&
+        !lifeLost
+      ) {
+      catchPressed = true;
+      choppe();
+    }
+
+
   }
 }
 
@@ -55,15 +75,23 @@ function mousemove (event) {
 
   }
 }
+function keyup() {
+	upPressed = false;
+	downPressed  = false;
+	catchPressed = false;
+}
 
 function keypress (event) {
   if (event.keyCode == 38 && !lifeLost) {
+  	upPressed = true;
     moveCharacterUp();
   }
   if (event.keyCode == 40 && !lifeLost) {
+  	downPressed = true;
     moveCharacterDown();
   }
   if (event.keyCode == 86) {
+  	catchPressed = true;
   	choppe();
   }
 

@@ -74,7 +74,8 @@
     }
 
     body {
-      background-color: #7a61a3;
+      background-image: url('images/pattern.png');
+      background-repeat:repeat;
     }
 
     header {
@@ -95,35 +96,48 @@
     footer {
       margin: 0 auto;
       color: white;
+      text-align : center;
     }
 
     a:link {
-      color: white;
+      color: #d32027;
     }
 
     a:visited {
-      color: #BBB;
+      color: #991b1f;
     }
 
     a:hover {
-      color: blue;
+      color: gray;
     }
 
   </style>
 
 
 </head>
-<body onkeydown="keypress(event);">
+<body onkeydown="keypress(event);" onkeyup="keyup(event)">
 <audio id="persoSon" preload="auto" autobuffer> 
   <source src="sounds/perso.mp3" />
   <source src="sounds/perso.ogg" />
   <source src="sounds/perso.wav" />
   <!-- now include flash fall back -->
 </audio>
+<audio id="enfantSon" preload="auto" autobuffer> 
+  <source src="sounds/enfant.mp3" />
+  <source src="sounds/enfant.ogg" />
+  <source src="sounds/enfant.wav" />
+  <!-- now include flash fall back -->
+</audio>
+<audio id="looseSon" preload="auto" autobuffer> 
+  <source src="sounds/loose.mp3" />
+  <source src="sounds/loose.ogg" />
+  <source src="sounds/loose.wav" />
+  <!-- now include flash fall back -->
+</audio>
+
 <div id="wrapper">
-  <header><h1>Play And Watch : Children Crossing</h1></header>
   <canvas id="canvas"></canvas>
-  <footer>Copyrights: une super team, fait à <a href="http://isartdigital.com"> Isart Digital </a></footer>
+  <footer>Copyrights: a great team, made at <a href="http://isartdigital.com">Isart Digital</a>. Use up and down key to move, "V" key to catch / release children. Read more at <a href="https://github.com/DjebbZ/Play---Watch"> this adress</a>. </footer>
 </div>
 <script type="text/javascript" src="buzz.js"></script>
 <script type="text/javascript" src="fonctions.js"></script>

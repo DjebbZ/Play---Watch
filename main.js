@@ -30,9 +30,10 @@ function metronome () {
       if (Math.random() > 0.9) {
         carArray[Math.round(Math.random(0.5) * 3)][0].etat = 1;
       }
-      if (childrenBool == true) {
+      if (childrenBool) {
         moveChildrens();
-      //  soundsArray[0].play();
+        //enfantSon.currentTime=0;
+    	//enfantSon.play();
 
         // Apparition d'un nouvel enfant
         if (Math.random() > 0.9) {

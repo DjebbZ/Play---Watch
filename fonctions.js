@@ -26,8 +26,9 @@ function drawChargement () {
  */
 function drawAll () {
   // Boutons
-  ctx.drawImage(messArray[1], boutonUp.x, boutonUp.y);
-  ctx.drawImage(messArray[1], boutonDown.x, boutonDown.y);
+  if (!upPressed) ctx.drawImage(messArray[1], boutonUp.x, boutonUp.y);
+  if (!downPressed) ctx.drawImage(messArray[1], boutonDown.x, boutonDown.y);
+  if (!catchPressed) ctx.drawImage(messArray[1], boutonCatch.x, boutonCatch.y);
 
   // Personnage
   ctx.drawImage(elementsArray[0], characterArray[characterPosition].x, characterArray[characterPosition].y);
@@ -160,6 +161,7 @@ function moveCharacterUp() {
 		  	}
 	}
  // soundsArray[1].play();
+persoSon.currentTime=0;
  persoSon.play();
 }
 
@@ -184,6 +186,7 @@ function moveCharacterDown () {
 	 }
 
 //  soundsArray[1].play();
+persoSon.currentTime=0;
 persoSon.play();
 }
 
@@ -192,7 +195,8 @@ persoSon.play();
  */
 function oneMoreDeath() {
   if (!lifeLost) {
-    //soundsArray[2].play();
+   		looseSon.currentTime=0;
+    	looseSon.play();
     nbDeaths++;
     lifeLost = true;
     if (nbDeaths == 3) {

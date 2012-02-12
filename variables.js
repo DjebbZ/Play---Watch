@@ -3,11 +3,16 @@ canvas.width = 1024;
 canvas.height = 512;
 var ctx = canvas.getContext('2d');
 var persoSon = document.getElementById("persoSon");
+var enfantSon = document.getElementById("enfantSon");
+var looseSon = document.getElementById("looseSon");
 if (navigator.language == "fr") {
   var langue = "fr"
 } else {
   var langue = "en"
 }
+var upPressed = false;
+var downPressed = false;
+var catchPressed = false;
 var mode = "menu"; // chargement || menu || jeu;
 var timer = 0;
 var choppeBool = false;
@@ -15,14 +20,20 @@ var nbDeaths = 0;
 var lifeLost = false;
 var rectangle = false;
 var boutonUp = {
-  x      : 50,
-  y      : 210,
+  x      : 48,
+  y      : 215,
   width  : 90,
   height : 90
 };
 var boutonDown = {
-  x      : 50,
-  y      : 320,
+  x      : 48,
+  y      : 348,
+  width  : boutonUp.width,
+  height : boutonUp.height
+};
+var boutonCatch = {
+  x      : 892,
+  y      : 296,
   width  : boutonUp.width,
   height : boutonUp.height
 };
