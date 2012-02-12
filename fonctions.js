@@ -31,7 +31,8 @@ function drawAll () {
   if (!catchPressed) ctx.drawImage(messArray[1], boutonCatch.x, boutonCatch.y);
 
   // Affichage du personnage
-  ctx.drawImage(elementsArray[0], characterArray[characterPosition].x, characterArray[characterPosition].y);
+  !lifeLost || !persoEcrase ?
+    ctx.drawImage(elementsArray[0], characterArray[characterPosition].x, characterArray[characterPosition].y) : '';
 
   // Score
   ctx.fillStyle = "black";
@@ -60,7 +61,13 @@ function drawAll () {
   // Affichage des morts
   for (i = 0; i < DieArray.length; i++) {
     if (DieArray[i].etat == 1) {
-      ctx.drawImage(elementsArray[5], DieArray[i].x, DieArray[i].y);
+      if (characterPosition == 1 || characterPosition == 2) {
+        ctx.drawImage(elementsArray[5], DieArray[i].x, DieArray[i].y);
+      } else if (characterPosition == 5 || characterPosition == 6) {
+        ctx.drawImage(elementsArray[6], DieArray[i].x, DieArray[i].y);
+      }
+
+
     }
   }
   if (rectangle) ctx.fillRect(0,0, canvas.width, canvas.height);
@@ -229,7 +236,9 @@ function oneMoreDeath() {
 }
 
 function drawDead() {
-  DieArray.etat = 1;
+  console.log("Draw dead", victimPerso);
+  victimPerso.etat = 0;
+  deadPerso.etat = 1
 }
 
 function shuffle(a)
