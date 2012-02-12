@@ -32,7 +32,7 @@ function metronome () {
       }
       if (childrenBool == true) {
         moveChildrens();
-        soundsArray[0].play();
+      //  soundsArray[0].play();
 
         // Apparition d'un nouvel enfant
         if (Math.random() > 0.9) {

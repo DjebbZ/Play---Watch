@@ -2,6 +2,7 @@ var canvas = document.getElementById("canvas");
 canvas.width = 1024;
 canvas.height = 512;
 var ctx = canvas.getContext('2d');
+var persoSon = document.getElementById("persoSon");
 if (navigator.language == "fr") {
   var langue = "fr"
 } else {

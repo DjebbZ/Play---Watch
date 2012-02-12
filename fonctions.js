@@ -159,7 +159,8 @@ function moveCharacterUp() {
 		  			}
 		  	}
 	}
-  soundsArray[1].play();
+ // soundsArray[1].play();
+ persoSon.play();
 }
 
 function moveCharacterDown () {
@@ -182,8 +183,8 @@ function moveCharacterDown () {
 		  	}
 	 }
 
-  soundsArray[1].play();
-
+//  soundsArray[1].play();
+persoSon.play();
 }
 
 /**
@@ -191,7 +192,7 @@ function moveCharacterDown () {
  */
 function oneMoreDeath() {
   if (!lifeLost) {
-    soundsArray[2].play();
+    //soundsArray[2].play();
     nbDeaths++;
     lifeLost = true;
     if (nbDeaths == 3) {
