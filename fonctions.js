@@ -38,6 +38,11 @@ function drawAll () {
   ctx.font = "40px RadiolandRegular";
   ctx.fillText(score.value, score.x, score.y);
 
+  // Nombre de morts
+  nbDeaths > 0 ? ctx.drawImage(elementsArray[4], 200, 50) : '';
+  nbDeaths > 1 ? ctx.drawImage(elementsArray[4], 250, 50) : '';
+  nbDeaths > 2 ? ctx.drawImage(elementsArray[4], 300, 50) : '';
+
 
   for (i = 0; i < carArray.length; i++) {
     for (e = 0; e < carArray[i].length; e++) {
@@ -119,14 +124,12 @@ function choppe()
 		{
 			if (childrenArray[characterPosition+8].etat == 1)
 				{
-					console.log("choppe")
 					choppeBool = true;
 					childrenArray[characterPosition+8].taken = 1;
 				}
 		}
 	else
 		{
-					console.log("unchoppe")
 					choppeBool = false;
 					childrenArray[characterPosition+8].taken = 0;
 					childrenArray[characterPosition+7].blocken = 0;

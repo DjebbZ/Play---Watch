@@ -47,11 +47,14 @@ function metronome () {
   } else {
     //drawDead();
 
+    // La partie recommence
     if (timer >= frequence * 4.4) {
       lifeLost = false;
       timer = 0;
       dangerousCar.etat = 0;
       victimChild.etat = 0;
+      victimChild.taken = 0;
+      choppeBool = false;
     }
 
   }
