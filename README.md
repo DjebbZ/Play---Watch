@@ -28,10 +28,10 @@ On a tablet/smartphone, the left buttons move the character, the right button ta
 Credits
 -------
 
-Kudos to (Johan)[https://github.com/iraldir], who pitched and proposed the game concept, and coded most of it.
-(Khalid)[https://github.com/DjebbZ] who discovered game development and helped with the code.
+Kudos to [Johan](https://github.com/iraldir), who pitched and proposed the game concept, and coded most of it.
+[Khalid](https://github.com/DjebbZ) who discovered game development and helped with the code.
 Emma who created all the graphics.
-The (ISART Digital school)[http://www.isartdigital.com/] who organized and hosted the event.
+The [ISART Digital school](http://www.isartdigital.com/) who organized and hosted the event.
 BlackBerry who sponsored the event, so we had food, drinks and sleeping commodities.
 Nintendo for the original Game & Watch games.
 
