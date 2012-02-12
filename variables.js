@@ -10,6 +10,7 @@ if (navigator.language == "fr") {
 } else {
   var langue = "en"
 }
+
 var upPressed = false;
 var downPressed = false;
 var catchPressed = false;

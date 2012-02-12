@@ -108,16 +108,16 @@ function moveChildrens()
 							{
 								score.value++;
 								frequence--;
-								probEnfantArray.push(1);
-								probEnfantArray.push(1);
-								probEnfantArray.push(1);
-								probEnfantArray.push(0);
-								probEnfantArray.push(0);
 								
-								probEnfantArray.push(1);
-								probEnfantArray.push(1);
-								probEnfantArray.push(0);
-								probEnfantArray.push(0);
+										if (Math.random() > 0.7)
+											{
+												probEnfantArray.push(1);
+											}	
+											else
+											{
+												probEnfantArray.push(0);
+											}
+																	
 								childrenArray[i-1].etat = 0;
 							}
 						}

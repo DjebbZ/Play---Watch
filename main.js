@@ -25,7 +25,7 @@ function metronome () {
       checkDefeat();
       timer = 0;
       // Apparition d'une nouvelle voiture
-      if (Math.random() > 0.9) {
+      if (Math.random() > 0.78) {
         carArray[Math.round(Math.random(0.5) * 3)][0].etat = 1;
       }
       if (childrenBool) {
@@ -46,7 +46,7 @@ function metronome () {
         	} 
         
 
-        childrenBool = false;
+        childrenBool = true;
       }
       else {
         childrenBool = true;
