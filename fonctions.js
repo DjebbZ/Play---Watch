@@ -93,13 +93,23 @@ function moveChildrens()
 									}
 								else
 									{
-									childrenArray[i-1].blocken = true;
+									childrenArray[i-1].blocken = 1;
 									}
 							}
 							else
 							{
 								score.value++;
 								frequence--;
+								probEnfantArray.push(1);
+								probEnfantArray.push(1);
+								probEnfantArray.push(1);
+								probEnfantArray.push(0);
+								probEnfantArray.push(0);
+								
+								probEnfantArray.push(1);
+								probEnfantArray.push(1);
+								probEnfantArray.push(0);
+								probEnfantArray.push(0);
 								childrenArray[i-1].etat = 0;
 							}
 						}
@@ -219,3 +229,21 @@ function oneMoreDeath() {
 function drawDead() {
   DieArray.etat = 1;
 }
+
+function shuffle(a)
+{
+   var j = 0;
+   var valI = '';
+   var valJ = valI;
+   var l = a.length - 1;
+   while(l > -1)
+   {
+		j = Math.floor(Math.random() * l);
+		valI = a[l];
+		valJ = a[j];
+		a[l] = valJ;
+		a[j] = valI;
+		l = l - 1;
+	}
+	return a;
+ }

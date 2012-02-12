@@ -19,6 +19,7 @@ var choppeBool = false;
 var nbDeaths = 0;
 var lifeLost = false;
 var rectangle = false;
+var curseurDifficulte = 0;
 var boutonUp = {
   x      : 48,
   y      : 215,
@@ -120,3 +121,10 @@ var DieArray = new Array(
   {etat: 0, x: 390, y: 205},
   {etat: 0, x: 390, y: 145}
 );
+
+var probEnfantArray = new Array(1, 1, 0, 0);
+for (i=0; i<6; i++)
+{
+	probEnfantArray.push(0);
+}
+probEnfantArray = shuffle(probEnfantArray);
